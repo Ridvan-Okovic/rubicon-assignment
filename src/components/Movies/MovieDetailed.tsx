@@ -2,8 +2,8 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { useState, useCallback, useEffect } from 'react';
 
 interface MovieInterface {
-  original_title: string;
-  backdrop_path: string;
+  title: string;
+  poster_path: string;
   overview: string;
 }
 
@@ -30,8 +30,8 @@ const MovieDetailed = () => {
     fetchMovieDetailsHandler();
   }, [fetchMovieDetailsHandler]);
 
-  const title = movie?.original_title;
-  const poster = movie?.backdrop_path;
+  const title = movie?.title;
+  const poster = movie?.poster_path;
   const overview = movie?.overview;
 
   let navigate = useNavigate();
