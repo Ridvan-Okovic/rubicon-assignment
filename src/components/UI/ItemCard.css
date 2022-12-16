@@ -1,0 +1,13 @@
+.item-card {
+  height: 20rem;
+  width: 28.45rem;
+  margin-bottom: 1rem;
+  background-color: #fcfcfd;
+  border-radius: 4px;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+  color: #36395a;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 18px;
+  text-align: center;
+}

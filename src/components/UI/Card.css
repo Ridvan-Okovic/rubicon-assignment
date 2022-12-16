@@ -1,0 +1,23 @@
+.card-wrapper {
+  margin-left: 10rem;
+  margin-right: 16rem;
+  height: auto;
+  margin-bottom: 5rem;
+}
+
+.card {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  background-color: #fcfcfd;
+  border-radius: 4px;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+  color: #36395a;
+  font-family: 'JetBrains Mono', monospace;
+  padding: 3rem;
+  font-size: 18px;
+  text-align: center;
+}
