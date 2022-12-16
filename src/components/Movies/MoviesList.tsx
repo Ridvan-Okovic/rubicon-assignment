@@ -1,12 +1,14 @@
 import ButtonGroup from '../UI/ButtonGroup';
 import Movie from './Movie';
 import Card from '../UI/Card';
+import '../UI/Card.css';
 import { useState, useCallback, useEffect } from 'react';
 
 interface IMovie {
   poster: string;
   title: string;
   id: string;
+  key: string;
 }
 
 const initialMovies: IMovie[] = [];
@@ -45,9 +47,15 @@ const MoviesList = () => {
   return (
     <>
       <ButtonGroup />
+      <h1 className="movies-title">Top 10 Movies</h1>
       <Card>
         {movies.map((movie) => (
-          <Movie id={movie.id} title={movie.title} poster={movie.poster} />
+          <Movie
+            key={movie.id}
+            id={movie.id}
+            title={movie.title}
+            poster={movie.poster}
+          />
         ))}
       </Card>
     </>

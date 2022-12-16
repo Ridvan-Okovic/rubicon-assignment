@@ -2,6 +2,7 @@ import ButtonGroup from '../UI/ButtonGroup';
 import Card from '../UI/Card';
 import { useState, useCallback, useEffect } from 'react';
 import TvSeries from './TvSeries';
+import '../UI/Card.css';
 
 interface ISeries {
   poster: string;
@@ -44,6 +45,7 @@ const TvSeriesList = () => {
   return (
     <>
       <ButtonGroup />
+      <h1 className="movies-title">Top 10 Series</h1>
       <Card>
         {series.map((item) => (
           <TvSeries id={item.id} title={item.title} poster={item.poster} />

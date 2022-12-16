@@ -4,7 +4,6 @@ const TvSeriesDetailsPage = () => {
   return (
     <>
       <TvSeriesDetailed />
-      <h1>Tv Series Details Page</h1>
     </>
   );
 };
