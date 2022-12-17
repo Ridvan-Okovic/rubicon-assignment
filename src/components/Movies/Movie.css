@@ -1,6 +1,7 @@
 .main {
   aspect-ratio: 16/9;
   height: 80%;
+  border-radius: 4px;
 }
 
 img {
@@ -20,4 +21,6 @@ img {
 
 .title h2 {
   cursor: pointer;
+  font-style: none;
+  text-decoration: none;
 }

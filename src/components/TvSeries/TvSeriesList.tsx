@@ -8,6 +8,7 @@ interface ISeries {
   poster: string;
   title: string;
   id: string;
+  key: string;
 }
 
 const initialSeries: ISeries[] = [];
@@ -48,7 +49,12 @@ const TvSeriesList = () => {
       <h1 className="movies-title">Top 10 Series</h1>
       <Card>
         {series.map((item) => (
-          <TvSeries id={item.id} title={item.title} poster={item.poster} />
+          <TvSeries
+            key={item.id}
+            id={item.id}
+            title={item.title}
+            poster={item.poster}
+          />
         ))}
       </Card>
     </>

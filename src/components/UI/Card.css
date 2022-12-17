@@ -28,3 +28,10 @@
   text-align: center;
   color: #36395a;
 }
+
+@media (max-width: 870px) {
+  .card-wrapper {
+    margin-left: 2rem;
+    margin-right: 8rem;
+  }
+}

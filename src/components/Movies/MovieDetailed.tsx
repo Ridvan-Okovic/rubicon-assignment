@@ -1,5 +1,8 @@
 import { useNavigate, useParams } from 'react-router-dom';
 import { useState, useCallback, useEffect } from 'react';
+import Card from '../UI/Card';
+import './MovieDetailed.css';
+import { BiArrowBack } from 'react-icons/bi';
 
 interface MovieInterface {
   title: string;
@@ -41,13 +44,18 @@ const MovieDetailed = () => {
 
   return (
     <>
-      <button onClick={revertStateHandler}>Back</button>
-      <img
-        src={`https://www.themoviedb.org/t/p/original${poster}`}
-        alt="poster"
-      ></img>
-      <h1>{title}</h1>
-      <p>{overview}</p>
+      <button className="back-button" onClick={revertStateHandler}>
+        <BiArrowBack />
+      </button>
+      <Card>
+        <img
+          className="detailed-poster"
+          src={`https://www.themoviedb.org/t/p/original${poster}`}
+          alt="poster"
+        ></img>
+        <h1>{title}</h1>
+        <p>{overview}</p>
+      </Card>
     </>
   );
 };

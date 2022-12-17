@@ -1,4 +1,3 @@
-import { useState, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 
 import ItemCard from '../UI/ItemCard';

@@ -1,4 +1,5 @@
 import ItemCard from '../UI/ItemCard';
+import { Link } from 'react-router-dom';
 
 interface ISeries {
   id: string;
@@ -16,7 +17,9 @@ const TvSeries = ({ id, title, poster }: ISeries) => {
         ></img>
       </section>
       <section className="title">
-        <h2>{title}</h2>
+        <Link to={`/tv-series/${id}`}>
+          <h2>{title}</h2>
+        </Link>
       </section>
     </ItemCard>
   );

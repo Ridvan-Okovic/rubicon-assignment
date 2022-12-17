@@ -1,7 +1,18 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './ButtonGroup.css';
 
+interface SyntheticEvent<T> {
+  currentTarget: EventTarget & T;
+}
+
 const ButtonGroup = () => {
+  const [query, setQuery] = useState('');
+
+  const searchHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setQuery(event.currentTarget.value);
+  };
+
   return (
     <div className="select-wrap">
       <div className="button-wrap">
@@ -13,6 +24,7 @@ const ButtonGroup = () => {
         </Link>
       </div>
       <input
+        onChange={searchHandler}
         className="input"
         placeholder="Enter the name of a movie/series"
       ></input>
