@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import './ButtonGroup.css';
 
@@ -6,12 +6,29 @@ interface SyntheticEvent<T> {
   currentTarget: EventTarget & T;
 }
 
-const ButtonGroup = () => {
+interface SearchFunction {
+  onAddSearchMovie: (query: string) => void;
+}
+
+const ButtonGroup = ({ onAddSearchMovie }: SearchFunction) => {
+  const [movieData, setMovieData] = useState([]);
   const [query, setQuery] = useState('');
+  const [validInput, setValidInput] = useState(false);
 
   const searchHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
     setQuery(event.currentTarget.value);
+    onAddSearchMovie(query);
   };
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      console.log('Checking validity of search');
+      setValidInput(query.length > 3);
+    }, 1000);
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [query]);
 
   return (
     <div className="select-wrap">
@@ -23,11 +40,11 @@ const ButtonGroup = () => {
           <button className="series-btn">Tv-Series</button>
         </Link>
       </div>
+
       <input
         onChange={searchHandler}
-        className="input"
         placeholder="Enter the name of a movie/series"
-      ></input>
+      />
     </div>
   );
 };

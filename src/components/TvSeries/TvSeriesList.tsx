@@ -43,9 +43,14 @@ const TvSeriesList = () => {
   useEffect(() => {
     fetchSeriesHandler();
   }, [fetchSeriesHandler]);
+
+  const addSearchMovie = (movieData: string) => {
+    console.log(movieData);
+  };
+
   return (
     <>
-      <ButtonGroup />
+      <ButtonGroup onAddSearchMovie={addSearchMovie} />
       <h1 className="movies-title">Top 10 Series</h1>
       <Card>
         {series.map((item) => (

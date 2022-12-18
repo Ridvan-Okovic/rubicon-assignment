@@ -17,7 +17,6 @@
   cursor: pointer;
   display: inline-flex;
   font-family: 'JetBrains Mono', monospace;
-
   justify-content: center;
   padding-left: 16px;
   padding-right: 16px;
@@ -85,31 +84,32 @@
   transform: translateY(2px);
 }
 
-.input {
-  width: auto;
-  height: 38px;
-  padding-left: 16px;
-  padding-right: 16px;
-  border: none;
+input {
+  width: 100%;
   margin-top: 1rem;
+  background-color: #fcfcfd;
   border-radius: 4px;
-  font-style: none;
   box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
     rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 16px;
+  color: #36395a;
+  border: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  outline: none;
 }
 
-.input:focus {
+input:focus {
   box-shadow: #d6d6e7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px,
     rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
-  outline: none;
 }
 
-.input:hover {
+input:hover {
   box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
     rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
-  outline: none;
+}
+
+input:active {
+  box-shadow: #d6d6e7 0 3px 7px inset;
 }
 
 @media (max-width: 870px) {
