@@ -1,3 +1,3 @@
 # Rubicon Assignment
 
-### Download or clone the GitHub repository on your local device. 
+### 1. Download or clone the GitHub repository on your local device. 
